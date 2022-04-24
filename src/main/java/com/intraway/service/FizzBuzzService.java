@@ -1,5 +1,7 @@
 package com.intraway.service;
 
+import java.util.Date;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -32,6 +34,7 @@ public class FizzBuzzService {
       this.operationsRepository = iOperationsRepository;
    }
 
+   //Get FizzBuzz
    public ResponseEntity<ResponseDTO> doFizzBuzz(final int min, final int max) {
       if(min >= max) {
          throw new BadRequest(Constants.ERROR_MIN_GE_MAX);
@@ -44,6 +47,15 @@ public class FizzBuzzService {
       return new ResponseEntity<>(response, HttpStatus.OK);
    }
 
+   //Get all operations
+   public ResponseEntity<List<ResponseDTO>> getOperations() {
+      final List<Operation> operations = operationsRepository.findAll();
+      final List<ResponseDTO> response = operationConverter.fromEntity(operations);
+
+      return new ResponseEntity<>(response, HttpStatus.OK);
+   }
+
+   // private uses
    private ResponseDTO getFizzBuzz(final int min, final int max) {
 
       final String listFizzBuzz = IntStream.rangeClosed(min, max)
@@ -88,6 +100,7 @@ public class FizzBuzzService {
 
       return ResponseDTO
             .builder()
+            .timestamp(new Date().getTime())
             .code(code)
             .description(description)
             .list(listFizzBuzz)

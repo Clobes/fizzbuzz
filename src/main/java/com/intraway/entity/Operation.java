@@ -1,7 +1,5 @@
 package com.intraway.entity;
 
-import java.time.LocalDateTime;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,6 +27,12 @@ public class Operation {
 
    @Column(name="timestamp", nullable = false)
    private long timeStamp;
+
+   @Column(name="description", nullable = false)
+   private String description;
+
+   @Column(name="code", nullable = false)
+   private String code;
 
    @Column(name="result", nullable = false)
    @Lob

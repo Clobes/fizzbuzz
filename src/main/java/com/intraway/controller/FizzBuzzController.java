@@ -1,5 +1,7 @@
 package com.intraway.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,9 +25,15 @@ public class FizzBuzzController {
       this.fizzBuzzService = fizzBuzzService;
    }
 
+
    @GetMapping("/{min}/{max}")
    public ResponseEntity<ResponseDTO> doFizzBuzz(@NonNull @PathVariable final Integer min, @NonNull @PathVariable final Integer max){
      return fizzBuzzService.doFizzBuzz(min, max);
+   }
+
+   @GetMapping("/list")
+   public ResponseEntity<List<ResponseDTO>> getOperations(){
+      return fizzBuzzService.getOperations();
    }
 
 }

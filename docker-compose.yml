@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+
+  MySQL:
+    image: mysql:8.0.28-debian
+    ports: 
+      - 3306:3306
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: s3cr3t
+      MYSQL_DATABASE: fizzbuzz
+
