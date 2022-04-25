@@ -46,7 +46,7 @@ public class FizzBuzzHandler {
       else if (listFizzBuzz.contains(Constants.FIZZ)) {
 
          description = Constants.FIZZ_DESCRIPTION;
-         code = EResponseCode.of(EResponseCode.FIZ_CODE);
+         code = EResponseCode.of(EResponseCode.FIZZ_CODE);
 
       }
       else {

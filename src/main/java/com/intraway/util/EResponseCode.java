@@ -12,7 +12,7 @@ import lombok.ToString;
 public enum EResponseCode {
    
    FIZZ_BUZZ_CODE("001"),
-   FIZ_CODE("002"),
+   FIZZ_CODE("002"),
    BUZZ_CODE("003"),
    FIZZ_AND_BUZZ_CODE("004"),
    DEFAULT("1000");

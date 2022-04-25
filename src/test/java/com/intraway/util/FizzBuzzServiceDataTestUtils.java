@@ -1,14 +1,12 @@
 package com.intraway.util;
 
 import java.util.Date;
-import java.util.Optional;
-
 import com.intraway.dto.ResponseDTO;
 import com.intraway.entity.Operation;
 
 public class FizzBuzzServiceDataTestUtils {
 
-   public static ResponseDTO getMultiploThe5And3(final EResponseCode code, final String description, final String list){
+   public static ResponseDTO getMultipleOfXXX(final EResponseCode code, final String description, final String list){
       return ResponseDTO
             .builder()
             .timestamp(new Date().getTime())
