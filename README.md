@@ -25,10 +25,13 @@ Si el número es multiplo de 3, debe imprimir __Fizz__, a su vez si es multiplo 
 >
 >   1) Situarce en la raiz del proyecto FizzBuzz y ejecutar: `docker-compose up -d`																							
 >   2) Ejecutar la aplicación desde el Ide.
+>   3) Ejecutar `docker ps` para obtener el CONTAINER_ID
+>   4) Para acceder a la base de datos del contenedor ejecutar: `docker exec <CONTAINER_ID> mysql -p` 
+>																							
+>__Important:__ Password: s3cr3t 
+>              
 >   
 ---
-
->
 
 ## Versiones Utilizadas
 
