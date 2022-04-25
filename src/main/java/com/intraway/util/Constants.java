@@ -12,6 +12,8 @@ public final class Constants {
 
    public static final String API_PATH_NOT_FOUND = "La api path consultada no existe";
 
+   public static final String OPERATION_NOT_FOUND = "No éxiste operación con id [ %s ]";
+
    //Response Descriptions
    public static final String DEFAULT_DESCRIPTION = "no encontraron múltiplos de 3 ni de 5";
 

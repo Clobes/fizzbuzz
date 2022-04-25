@@ -21,8 +21,8 @@ import lombok.extern.slf4j.Slf4j;
 @ControllerAdvice
 public class RestResponseExceptionHandler extends ResponseEntityExceptionHandler {
 
-   @ExceptionHandler(value = NullPointerException.class)
-   public ResponseEntity<Object> handlerAll(final NullPointerException ex, final WebRequest request){
+   @ExceptionHandler(value = Exception.class)
+   public ResponseEntity<Object> handlerAll(final Exception ex, final WebRequest request){
       log.error(ex.getLocalizedMessage());
 
       HttpStatus internalServerError = HttpStatus.INTERNAL_SERVER_ERROR;
@@ -37,6 +37,15 @@ public class RestResponseExceptionHandler extends ResponseEntityExceptionHandler
       HttpStatus badRequest = HttpStatus.BAD_REQUEST;
 
       return createResponse(ex, badRequest, request);
+   }
+
+   @ExceptionHandler(value = NotFound.class)
+   public ResponseEntity<Object> handlerNotFoundException(final NotFound ex, final WebRequest request){
+      log.error(ex.getLocalizedMessage());
+
+      HttpStatus notFound = HttpStatus.NOT_FOUND;
+
+      return createResponse(ex, notFound, request);
    }
 
    @Override

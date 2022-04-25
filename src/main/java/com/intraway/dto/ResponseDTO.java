@@ -9,6 +9,7 @@ import lombok.Setter;
 @Builder
 public class ResponseDTO {
 
+   private Long id;
    private long timestamp;
    public String code;
    public String description;

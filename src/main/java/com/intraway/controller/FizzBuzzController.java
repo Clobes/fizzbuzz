@@ -36,4 +36,9 @@ public class FizzBuzzController {
       return fizzBuzzService.getOperations();
    }
 
+   @GetMapping("/{id}")
+   public ResponseEntity<ResponseDTO> getOperationById(@NonNull @PathVariable final Long id){
+      return fizzBuzzService.getOperationById(id);
+   }
+
 }

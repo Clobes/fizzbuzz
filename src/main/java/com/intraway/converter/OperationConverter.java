@@ -22,6 +22,7 @@ public class OperationConverter extends AbstractConverter<Operation, ResponseDTO
 
       return ResponseDTO
             .builder()
+            .id(entity.getId())
             .timestamp(entity.getTimeStamp())
             .code(entity.getCode())
             .description(entity.getDescription())
