@@ -46,11 +46,11 @@ Si el número es multiplo de 3, debe imprimir __Fizz__, a su vez si es multiplo 
 
 ## Conexiones del Proyecto
 
-|              |                                                         |                                                                                                                      |
-| ------------ | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |                                                                                        |
-| __URL__      | <http://localhost:8080/intraway/apifizzbuzz/{min}/{max}>            | Lista todos los números del rango con sus caracteristicas                                                            |
-| __URL__      | <http://localhost:8080/intraway/apifizzbuzz/list>                   | Lista todas las operaciones consultadas                                                                              |
-| __URL__      | <http://localhost:8080/intraway/apifizzbuzz/{id_operacion}}>        | Lista operación consultada                                                                                           |
+|              |                                                                      |                                                                                                                      |
+| ------------ | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| __URL__      | <http://localhost:8080/intraway/api/fizzbuzz/{min}/{max}>            | Lista todos los números del rango con sus caracteristicas                                                            |
+| __URL__      | <http://localhost:8080/intraway/api/fizzbuzz/list>                   | Lista todas las operaciones consultadas                                                                              |
+| __URL__      | <http://localhost:8080/intraway/api/fizzbuzz/{id_operacion}}>        | Lista operación consultada                                                                                           |
 
 
 ---
